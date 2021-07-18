@@ -3,7 +3,7 @@ html{
     background: radial-gradient(circle,#fff,#ccc);
 }
 #container{
-    height: 350px;
+    height: 430px;
     width: 600px;
     background-color: #9DD2EA;
     margin: 100px auto;
@@ -37,4 +37,54 @@ html{
     color: white;
     padding: 11px ;
     display: none;
+}
+
+#question{
+    width: 490px;
+    height: 170px;
+    margin: 50px auto 10px auto;
+    background-color: #9DA0EA;
+    box-shadow: 0px 4px #535aa8;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive,sans-serif;
+    color: black;
+}
+
+#instruction{
+    width: 490px;
+    height: 50px;
+    background-color: #B481D9;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0px 4px #8153a8;
+}
+
+#choices{
+    height: 100px;
+    width: 490px;
+    margin: 5px auto;
+}
+.box{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 50px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+}
+
+.box:hover{
+    background-color: #9C89F6;
+    color: white;
+    box-shadow: 0px 4px #6b54d3;
+}
+
+#box4{
+    margin-right: 0px;
 }
