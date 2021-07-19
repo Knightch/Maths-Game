@@ -1,10 +1,14 @@
 var playing = false;
 var score;
 var action;
+var correctAnswer;
 
 document.getElementById("startreset").onclick = function () {
+   
     if (playing == true) {
         location.reload();
+
+
     } else {
         playing = true;
         score = 0;
@@ -14,6 +18,7 @@ document.getElementById("startreset").onclick = function () {
         timeremaining = 60;
         startCountdown();
         hide("gameOver");
+        generateQA();
     }
 }
 
@@ -45,4 +50,23 @@ function show(id) {
 }
 function hide(id) {
     document.getElementById(id).style.display = "none";
+}
+function generateQA() {
+    var x = 1 + Math.round(9 * Math.random());
+    var y = 1 + Math.round(9 * Math.random());
+    correctAnswer = x * y;
+
+    document.getElementById("question").innerHTML = x + "X" + y;
+    var correctPosition = 1 + Math.round(3 * Math.random());
+    document.getElementById("box" + correctPosition).innerHTML = correctAnswer;
+
+    for (i = 1; i < 5; i++) {
+        if (i != correctPosition) {
+            var wronganswer;
+            do {
+                wronganswer = (1 + Math.round(9 * Math.random())) * (1 + Math.round(9 * Math.random()));
+                document.getElementById("box" + i).innerHTML = wronganswer;
+            } while (wronganswer == correctAnswer)
+        }
+    }
 }
